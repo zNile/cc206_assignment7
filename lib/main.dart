@@ -98,13 +98,14 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          // Add Row
+          
+          //Addition
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Expanded(
                 child: TextField(
-                  controller: add1Controller, // Use the controller
+                  controller: add1Controller,
                   decoration: InputDecoration(labelText: "First Number"),
                   keyboardType: TextInputType.number,
                 ),
@@ -112,7 +113,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
               const Text(" + "),
               Expanded(
                 child: TextField(
-                  controller: add2Controller, // Use the controller
+                  controller: add2Controller,
                   decoration: InputDecoration(labelText: "Second Number"),
                   keyboardType: TextInputType.number,
                 ),
@@ -121,10 +122,9 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 icon: const Text("=", style: TextStyle(fontSize: 24)),
                 onPressed: calculateSum,
               ),
-              Text(' $sum'), // Display the result next to the button
+              Text(' $sum'),
             ],
           ),
-          // Additional operation rows can be added here
 
           //Subtraction
           Row(
